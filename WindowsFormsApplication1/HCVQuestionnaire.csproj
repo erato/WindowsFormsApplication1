@@ -59,52 +59,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmQ4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQ4.Designer.cs">
-      <DependentUpon>frmQ4.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmQ1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQ1.Designer.cs">
       <DependentUpon>frmQ1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQ3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQ3.Designer.cs">
-      <DependentUpon>frmQ3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQ2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQ2.Designer.cs">
-      <DependentUpon>frmQ2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQuestions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQuestions.Designer.cs">
-      <DependentUpon>frmQuestions.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmQ4.resx">
-      <DependentUpon>frmQ4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmQ1.resx">
       <DependentUpon>frmQ1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQ3.resx">
-      <DependentUpon>frmQ3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQ2.resx">
-      <DependentUpon>frmQ2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQuestions.resx">
-      <DependentUpon>frmQuestions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

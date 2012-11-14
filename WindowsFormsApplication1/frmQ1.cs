@@ -29,6 +29,11 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
+        private void rbHigh_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
        
     }
 }
