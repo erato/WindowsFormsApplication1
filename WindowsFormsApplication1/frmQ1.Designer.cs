@@ -28,38 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.gbQuestionNumber = new System.Windows.Forms.GroupBox();
+            this.gbYesNo = new System.Windows.Forms.GroupBox();
+            this.rbYes = new System.Windows.Forms.RadioButton();
+            this.rbNo = new System.Windows.Forms.RadioButton();
             this.btnRead = new System.Windows.Forms.Button();
             this.lblQuestion = new System.Windows.Forms.Label();
-            this.rbNo = new System.Windows.Forms.RadioButton();
-            this.rbYes = new System.Windows.Forms.RadioButton();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.gbYesNo = new System.Windows.Forms.GroupBox();
             this.gbHighLow = new System.Windows.Forms.GroupBox();
+            this.rbStable = new System.Windows.Forms.RadioButton();
+            this.rbModerate = new System.Windows.Forms.RadioButton();
             this.rbHigh = new System.Windows.Forms.RadioButton();
             this.rbLow = new System.Windows.Forms.RadioButton();
-            this.rbMod = new System.Windows.Forms.RadioButton();
-            this.rbStable = new System.Windows.Forms.RadioButton();
-            this.groupBox.SuspendLayout();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.gbQuestionNumber.SuspendLayout();
             this.gbYesNo.SuspendLayout();
             this.gbHighLow.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox
+            // gbQuestionNumber
             // 
-            this.groupBox.Controls.Add(this.gbYesNo);
-            this.groupBox.Controls.Add(this.btnRead);
-            this.groupBox.Controls.Add(this.lblQuestion);
-            this.groupBox.Controls.Add(this.gbHighLow);
-            this.groupBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox.ForeColor = System.Drawing.Color.Black;
-            this.groupBox.Location = new System.Drawing.Point(13, 15);
-            this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(896, 152);
-            this.groupBox.TabIndex = 2;
-            this.groupBox.TabStop = false;
-            this.groupBox.Text = "Question 1";
+            this.gbQuestionNumber.Controls.Add(this.btnRead);
+            this.gbQuestionNumber.Controls.Add(this.lblQuestion);
+            this.gbQuestionNumber.Controls.Add(this.gbHighLow);
+            this.gbQuestionNumber.Controls.Add(this.gbYesNo);
+            this.gbQuestionNumber.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbQuestionNumber.ForeColor = System.Drawing.Color.Black;
+            this.gbQuestionNumber.Location = new System.Drawing.Point(13, 15);
+            this.gbQuestionNumber.Name = "gbQuestionNumber";
+            this.gbQuestionNumber.Size = new System.Drawing.Size(896, 152);
+            this.gbQuestionNumber.TabIndex = 2;
+            this.gbQuestionNumber.TabStop = false;
+            this.gbQuestionNumber.Text = "Question 1";
+            // 
+            // gbYesNo
+            // 
+            this.gbYesNo.Controls.Add(this.rbYes);
+            this.gbYesNo.Controls.Add(this.rbNo);
+            this.gbYesNo.Location = new System.Drawing.Point(582, 0);
+            this.gbYesNo.Name = "gbYesNo";
+            this.gbYesNo.Size = new System.Drawing.Size(200, 152);
+            this.gbYesNo.TabIndex = 6;
+            this.gbYesNo.TabStop = false;
+            this.gbYesNo.Text = "Answer";
+            this.gbYesNo.Visible = false;
+            // 
+            // rbYes
+            // 
+            this.rbYes.Location = new System.Drawing.Point(18, 39);
+            this.rbYes.Name = "rbYes";
+            this.rbYes.Size = new System.Drawing.Size(176, 23);
+            this.rbYes.TabIndex = 0;
+            this.rbYes.TabStop = true;
+            this.rbYes.Text = "Yes";
+            this.rbYes.UseVisualStyleBackColor = true;
+            // 
+            // rbNo
+            // 
+            this.rbNo.Location = new System.Drawing.Point(18, 99);
+            this.rbNo.Name = "rbNo";
+            this.rbNo.Size = new System.Drawing.Size(176, 23);
+            this.rbNo.TabIndex = 1;
+            this.rbNo.TabStop = true;
+            this.rbNo.Text = "No";
+            this.rbNo.UseVisualStyleBackColor = true;
             // 
             // btnRead
             // 
@@ -83,25 +115,59 @@
             this.lblQuestion.TabIndex = 2;
             this.lblQuestion.Text = "Have you missed any doses of your medication?";
             // 
-            // rbNo
+            // gbHighLow
             // 
-            this.rbNo.Location = new System.Drawing.Point(18, 99);
-            this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(176, 23);
-            this.rbNo.TabIndex = 1;
-            this.rbNo.TabStop = true;
-            this.rbNo.Text = "No";
-            this.rbNo.UseVisualStyleBackColor = true;
+            this.gbHighLow.Controls.Add(this.rbStable);
+            this.gbHighLow.Controls.Add(this.rbModerate);
+            this.gbHighLow.Controls.Add(this.rbHigh);
+            this.gbHighLow.Controls.Add(this.rbLow);
+            this.gbHighLow.Location = new System.Drawing.Point(582, 0);
+            this.gbHighLow.Name = "gbHighLow";
+            this.gbHighLow.Size = new System.Drawing.Size(200, 152);
+            this.gbHighLow.TabIndex = 7;
+            this.gbHighLow.TabStop = false;
+            this.gbHighLow.Text = "Answer";
+            this.gbHighLow.Visible = false;
             // 
-            // rbYes
+            // rbStable
             // 
-            this.rbYes.Location = new System.Drawing.Point(18, 39);
-            this.rbYes.Name = "rbYes";
-            this.rbYes.Size = new System.Drawing.Size(176, 23);
-            this.rbYes.TabIndex = 0;
-            this.rbYes.TabStop = true;
-            this.rbYes.Text = "Yes";
-            this.rbYes.UseVisualStyleBackColor = true;
+            this.rbStable.Location = new System.Drawing.Point(18, 86);
+            this.rbStable.Name = "rbStable";
+            this.rbStable.Size = new System.Drawing.Size(176, 23);
+            this.rbStable.TabIndex = 3;
+            this.rbStable.TabStop = true;
+            this.rbStable.Text = "Stable";
+            this.rbStable.UseVisualStyleBackColor = true;
+            // 
+            // rbModerate
+            // 
+            this.rbModerate.Location = new System.Drawing.Point(18, 54);
+            this.rbModerate.Name = "rbModerate";
+            this.rbModerate.Size = new System.Drawing.Size(176, 23);
+            this.rbModerate.TabIndex = 2;
+            this.rbModerate.TabStop = true;
+            this.rbModerate.Text = "Moderate";
+            this.rbModerate.UseVisualStyleBackColor = true;
+            // 
+            // rbHigh
+            // 
+            this.rbHigh.Location = new System.Drawing.Point(18, 25);
+            this.rbHigh.Name = "rbHigh";
+            this.rbHigh.Size = new System.Drawing.Size(176, 23);
+            this.rbHigh.TabIndex = 0;
+            this.rbHigh.TabStop = true;
+            this.rbHigh.Text = "High";
+            this.rbHigh.UseVisualStyleBackColor = true;
+            // 
+            // rbLow
+            // 
+            this.rbLow.Location = new System.Drawing.Point(18, 120);
+            this.rbLow.Name = "rbLow";
+            this.rbLow.Size = new System.Drawing.Size(176, 23);
+            this.rbLow.TabIndex = 1;
+            this.rbLow.TabStop = true;
+            this.rbLow.Text = "Low";
+            this.rbLow.UseVisualStyleBackColor = true;
             // 
             // btnNext
             // 
@@ -126,73 +192,6 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // gbYesNo
-            // 
-            this.gbYesNo.Controls.Add(this.rbYes);
-            this.gbYesNo.Controls.Add(this.rbNo);
-            this.gbYesNo.Location = new System.Drawing.Point(582, 0);
-            this.gbYesNo.Name = "gbYesNo";
-            this.gbYesNo.Size = new System.Drawing.Size(200, 152);
-            this.gbYesNo.TabIndex = 6;
-            this.gbYesNo.TabStop = false;
-            this.gbYesNo.Text = "Answer";
-            this.gbYesNo.Visible = false;
-            // 
-            // gbHighLow
-            // 
-            this.gbHighLow.Controls.Add(this.rbStable);
-            this.gbHighLow.Controls.Add(this.rbMod);
-            this.gbHighLow.Controls.Add(this.rbHigh);
-            this.gbHighLow.Controls.Add(this.rbLow);
-            this.gbHighLow.Location = new System.Drawing.Point(582, 0);
-            this.gbHighLow.Name = "gbHighLow";
-            this.gbHighLow.Size = new System.Drawing.Size(200, 152);
-            this.gbHighLow.TabIndex = 7;
-            this.gbHighLow.TabStop = false;
-            this.gbHighLow.Text = "Answer";
-            this.gbHighLow.Visible = false;
-            // 
-            // rbHigh
-            // 
-            this.rbHigh.Location = new System.Drawing.Point(18, 25);
-            this.rbHigh.Name = "rbHigh";
-            this.rbHigh.Size = new System.Drawing.Size(176, 23);
-            this.rbHigh.TabIndex = 0;
-            this.rbHigh.TabStop = true;
-            this.rbHigh.Text = "High";
-            this.rbHigh.UseVisualStyleBackColor = true;
-            this.rbHigh.CheckedChanged += new System.EventHandler(this.rbHigh_CheckedChanged);
-            // 
-            // rbLow
-            // 
-            this.rbLow.Location = new System.Drawing.Point(18, 120);
-            this.rbLow.Name = "rbLow";
-            this.rbLow.Size = new System.Drawing.Size(176, 23);
-            this.rbLow.TabIndex = 1;
-            this.rbLow.TabStop = true;
-            this.rbLow.Text = "Low";
-            this.rbLow.UseVisualStyleBackColor = true;
-            // 
-            // rbMod
-            // 
-            this.rbMod.Location = new System.Drawing.Point(18, 54);
-            this.rbMod.Name = "rbMod";
-            this.rbMod.Size = new System.Drawing.Size(176, 23);
-            this.rbMod.TabIndex = 2;
-            this.rbMod.TabStop = true;
-            this.rbMod.Text = "Moderate";
-            this.rbMod.UseVisualStyleBackColor = true;
-            // 
-            // rbStable
-            // 
-            this.rbStable.Location = new System.Drawing.Point(18, 86);
-            this.rbStable.Name = "rbStable";
-            this.rbStable.Size = new System.Drawing.Size(176, 23);
-            this.rbStable.TabIndex = 3;
-            this.rbStable.TabStop = true;
-            this.rbStable.Text = "Stable";
-            this.rbStable.UseVisualStyleBackColor = true;
-            // 
             // frmQ1
             // 
             this.AcceptButton = this.btnNext;
@@ -203,13 +202,13 @@
             this.ClientSize = new System.Drawing.Size(921, 240);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.groupBox);
+            this.Controls.Add(this.gbQuestionNumber);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmQ1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HCV Questionnaire";
-            this.groupBox.ResumeLayout(false);
+            this.gbQuestionNumber.ResumeLayout(false);
             this.gbYesNo.ResumeLayout(false);
             this.gbHighLow.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -218,7 +217,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox;
+        private System.Windows.Forms.GroupBox gbQuestionNumber;
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.RadioButton rbYes;
@@ -230,7 +229,7 @@
         private System.Windows.Forms.RadioButton rbHigh;
         private System.Windows.Forms.RadioButton rbLow;
         private System.Windows.Forms.RadioButton rbStable;
-        private System.Windows.Forms.RadioButton rbMod;
+        private System.Windows.Forms.RadioButton rbModerate;
 
     }
 }
