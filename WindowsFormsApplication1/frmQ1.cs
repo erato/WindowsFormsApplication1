@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Synthesis;
 
 namespace WindowsFormsApplication1
 {
@@ -93,12 +94,23 @@ namespace WindowsFormsApplication1
                     case "Stable":
                         rbStable.Checked=true;
                         break;
+                    default:
+                        gbHighLow.Controls.OfType<RadioButton>().ToList().ForEach(p => p.Checked = false);
+                        gbYesNo.Controls.OfType<RadioButton>().ToList().ForEach(p => p.Checked = false);
+
+                        //unchecked the form
+                        break;
                 }
             }
             else
             {
                 if (iCurrentQuestion > tQuestionAnswer.Rows.Count)
-                    iCurrentQuestion = tQuestionAnswer.Rows.Count;
+                {
+                    frmCESD frmNext = new frmCESD(tQuestionAnswer);
+                    frmNext.Show();
+                    
+                    this.Hide();
+                }
 
                 if (iCurrentQuestion < 1)
                     iCurrentQuestion = 1;
@@ -144,10 +156,10 @@ namespace WindowsFormsApplication1
             int i = 1;
             tQuestionAnswer.Rows.Add(i++, "Have you missed any does of your medicine?", "YesNo");
             tQuestionAnswer.Rows.Add(i++, "Have you missed more than 1 day of work since the last visit?", "YesNo");
-            tQuestionAnswer.Rows.Add(i++, "Do you have any problems or rigns of infection where you got the shot?", "YesNo");
+            tQuestionAnswer.Rows.Add(i++, "Do you have any problems or signs of infection where you got the shot?", "YesNo");
             tQuestionAnswer.Rows.Add(i++, "Do you have pain in your bottom/rectum?", "YesNo");
             tQuestionAnswer.Rows.Add(i++, "Are you concerned about your energy level or fatigue?", "YesNo");
-            tQuestionAnswer.Rows.Add(i++, "Are  you drinking alcohol", "YesNo");
+            tQuestionAnswer.Rows.Add(i++, "Are  you drinking alcohol?", "YesNo");
             tQuestionAnswer.Rows.Add(i++, "Do you have a rash?", "YesNo");
             tQuestionAnswer.Rows.Add(i++, "How is your stress level?", "HighLow");
             tQuestionAnswer.Rows.Add(i++, "Have you lost weight?", "YesNo");
@@ -173,6 +185,19 @@ namespace WindowsFormsApplication1
                 if (r != null && r.Checked) return r.Text;
             }
             return "";
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            // Initialize a new instance of the SpeechSynthesizer.
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+
+            // Configure the audio output. 
+            synth.SetOutputToDefaultAudioDevice();
+            
+            // Speak a string.
+            synth.Speak(lblQuestion.Text);
+
         }
 
     }

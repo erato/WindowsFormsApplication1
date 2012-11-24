@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.gbQuestionNumber = new System.Windows.Forms.GroupBox();
-            this.gbYesNo = new System.Windows.Forms.GroupBox();
-            this.rbYes = new System.Windows.Forms.RadioButton();
-            this.rbNo = new System.Windows.Forms.RadioButton();
             this.btnRead = new System.Windows.Forms.Button();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.gbHighLow = new System.Windows.Forms.GroupBox();
@@ -39,11 +36,14 @@
             this.rbModerate = new System.Windows.Forms.RadioButton();
             this.rbHigh = new System.Windows.Forms.RadioButton();
             this.rbLow = new System.Windows.Forms.RadioButton();
+            this.gbYesNo = new System.Windows.Forms.GroupBox();
+            this.rbYes = new System.Windows.Forms.RadioButton();
+            this.rbNo = new System.Windows.Forms.RadioButton();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.gbQuestionNumber.SuspendLayout();
-            this.gbYesNo.SuspendLayout();
             this.gbHighLow.SuspendLayout();
+            this.gbYesNo.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbQuestionNumber
@@ -60,6 +60,83 @@
             this.gbQuestionNumber.TabIndex = 2;
             this.gbQuestionNumber.TabStop = false;
             this.gbQuestionNumber.Text = "Question 1";
+            // 
+            // btnRead
+            // 
+            this.btnRead.AccessibleDescription = "Read this question";
+            this.btnRead.AccessibleName = "Button";
+            this.btnRead.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.clipart_mb_speaker;
+            this.btnRead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRead.Location = new System.Drawing.Point(800, 17);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(84, 84);
+            this.btnRead.TabIndex = 5;
+            this.btnRead.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
+            // 
+            // lblQuestion
+            // 
+            this.lblQuestion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.Location = new System.Drawing.Point(17, 39);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new System.Drawing.Size(559, 104);
+            this.lblQuestion.TabIndex = 2;
+            this.lblQuestion.Text = "Have you missed any doses of your medication?";
+            // 
+            // gbHighLow
+            // 
+            this.gbHighLow.Controls.Add(this.rbStable);
+            this.gbHighLow.Controls.Add(this.rbModerate);
+            this.gbHighLow.Controls.Add(this.rbHigh);
+            this.gbHighLow.Controls.Add(this.rbLow);
+            this.gbHighLow.Location = new System.Drawing.Point(582, 0);
+            this.gbHighLow.Name = "gbHighLow";
+            this.gbHighLow.Size = new System.Drawing.Size(200, 152);
+            this.gbHighLow.TabIndex = 7;
+            this.gbHighLow.TabStop = false;
+            this.gbHighLow.Text = "Answer";
+            this.gbHighLow.Visible = false;
+            // 
+            // rbStable
+            // 
+            this.rbStable.Location = new System.Drawing.Point(18, 87);
+            this.rbStable.Name = "rbStable";
+            this.rbStable.Size = new System.Drawing.Size(176, 23);
+            this.rbStable.TabIndex = 3;
+            this.rbStable.TabStop = true;
+            this.rbStable.Text = "Stable";
+            this.rbStable.UseVisualStyleBackColor = true;
+            // 
+            // rbModerate
+            // 
+            this.rbModerate.Location = new System.Drawing.Point(18, 56);
+            this.rbModerate.Name = "rbModerate";
+            this.rbModerate.Size = new System.Drawing.Size(176, 23);
+            this.rbModerate.TabIndex = 2;
+            this.rbModerate.TabStop = true;
+            this.rbModerate.Text = "Moderate";
+            this.rbModerate.UseVisualStyleBackColor = true;
+            // 
+            // rbHigh
+            // 
+            this.rbHigh.Location = new System.Drawing.Point(18, 25);
+            this.rbHigh.Name = "rbHigh";
+            this.rbHigh.Size = new System.Drawing.Size(176, 23);
+            this.rbHigh.TabIndex = 0;
+            this.rbHigh.TabStop = true;
+            this.rbHigh.Text = "High";
+            this.rbHigh.UseVisualStyleBackColor = true;
+            // 
+            // rbLow
+            // 
+            this.rbLow.Location = new System.Drawing.Point(18, 118);
+            this.rbLow.Name = "rbLow";
+            this.rbLow.Size = new System.Drawing.Size(176, 23);
+            this.rbLow.TabIndex = 1;
+            this.rbLow.TabStop = true;
+            this.rbLow.Text = "Low";
+            this.rbLow.UseVisualStyleBackColor = true;
             // 
             // gbYesNo
             // 
@@ -92,82 +169,6 @@
             this.rbNo.TabStop = true;
             this.rbNo.Text = "No";
             this.rbNo.UseVisualStyleBackColor = true;
-            // 
-            // btnRead
-            // 
-            this.btnRead.AccessibleDescription = "Read this question";
-            this.btnRead.AccessibleName = "Button";
-            this.btnRead.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.clipart_mb_speaker;
-            this.btnRead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnRead.Location = new System.Drawing.Point(800, 17);
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(84, 84);
-            this.btnRead.TabIndex = 5;
-            this.btnRead.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRead.UseVisualStyleBackColor = true;
-            // 
-            // lblQuestion
-            // 
-            this.lblQuestion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion.Location = new System.Drawing.Point(17, 39);
-            this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(559, 104);
-            this.lblQuestion.TabIndex = 2;
-            this.lblQuestion.Text = "Have you missed any doses of your medication?";
-            // 
-            // gbHighLow
-            // 
-            this.gbHighLow.Controls.Add(this.rbStable);
-            this.gbHighLow.Controls.Add(this.rbModerate);
-            this.gbHighLow.Controls.Add(this.rbHigh);
-            this.gbHighLow.Controls.Add(this.rbLow);
-            this.gbHighLow.Location = new System.Drawing.Point(582, 0);
-            this.gbHighLow.Name = "gbHighLow";
-            this.gbHighLow.Size = new System.Drawing.Size(200, 152);
-            this.gbHighLow.TabIndex = 7;
-            this.gbHighLow.TabStop = false;
-            this.gbHighLow.Text = "Answer";
-            this.gbHighLow.Visible = false;
-            // 
-            // rbStable
-            // 
-            this.rbStable.Location = new System.Drawing.Point(18, 86);
-            this.rbStable.Name = "rbStable";
-            this.rbStable.Size = new System.Drawing.Size(176, 23);
-            this.rbStable.TabIndex = 3;
-            this.rbStable.TabStop = true;
-            this.rbStable.Text = "Stable";
-            this.rbStable.UseVisualStyleBackColor = true;
-            // 
-            // rbModerate
-            // 
-            this.rbModerate.Location = new System.Drawing.Point(18, 54);
-            this.rbModerate.Name = "rbModerate";
-            this.rbModerate.Size = new System.Drawing.Size(176, 23);
-            this.rbModerate.TabIndex = 2;
-            this.rbModerate.TabStop = true;
-            this.rbModerate.Text = "Moderate";
-            this.rbModerate.UseVisualStyleBackColor = true;
-            // 
-            // rbHigh
-            // 
-            this.rbHigh.Location = new System.Drawing.Point(18, 25);
-            this.rbHigh.Name = "rbHigh";
-            this.rbHigh.Size = new System.Drawing.Size(176, 23);
-            this.rbHigh.TabIndex = 0;
-            this.rbHigh.TabStop = true;
-            this.rbHigh.Text = "High";
-            this.rbHigh.UseVisualStyleBackColor = true;
-            // 
-            // rbLow
-            // 
-            this.rbLow.Location = new System.Drawing.Point(18, 120);
-            this.rbLow.Name = "rbLow";
-            this.rbLow.Size = new System.Drawing.Size(176, 23);
-            this.rbLow.TabIndex = 1;
-            this.rbLow.TabStop = true;
-            this.rbLow.Text = "Low";
-            this.rbLow.UseVisualStyleBackColor = true;
             // 
             // btnNext
             // 
@@ -209,8 +210,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HCV Questionnaire";
             this.gbQuestionNumber.ResumeLayout(false);
-            this.gbYesNo.ResumeLayout(false);
             this.gbHighLow.ResumeLayout(false);
+            this.gbYesNo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
