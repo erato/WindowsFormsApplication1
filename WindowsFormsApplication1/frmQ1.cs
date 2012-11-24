@@ -16,14 +16,16 @@ namespace WindowsFormsApplication1
         private int iCurrentQuestion;
         private DataTable tQuestionAnswer = new DataTable();
         private string sAnswer = "";
+        private int iQuestionStart = 1;
 
         public frmQ1()
         {
             InitializeComponent();
 
             InitiateTable();
-            
-            iCurrentQuestion = 1;
+
+            btnBack.Visible = false;
+            iCurrentQuestion = iQuestionStart;
             sAnswer = "";
             ShowQuestion();
         }
@@ -36,6 +38,14 @@ namespace WindowsFormsApplication1
             sAnswer = "";
             //Prompt for Last Question
             iCurrentQuestion--;
+
+            if (iCurrentQuestion <= iQuestionStart)
+            {
+                iCurrentQuestion = iQuestionStart;
+                btnBack.Visible = false;
+            }
+
+            btnNext.Text = "Next";
             ShowQuestion();
         }
 
@@ -47,7 +57,23 @@ namespace WindowsFormsApplication1
             sAnswer = "";
             //Prompt for Next Question
             iCurrentQuestion++;
-            ShowQuestion();
+            btnBack.Visible = true;
+
+            if (iCurrentQuestion == tQuestionAnswer.Rows.Count)
+            {
+                btnNext.Text = "Start CESD";
+             
+            }
+            else if (iCurrentQuestion > tQuestionAnswer.Rows.Count)
+            {
+                frmCESD frmNext = new frmCESD(tQuestionAnswer);
+                frmNext.Show();
+
+                this.Hide();
+
+            }
+            
+            ShowQuestion();        
         }
 
 
@@ -101,21 +127,7 @@ namespace WindowsFormsApplication1
                         //unchecked the form
                         break;
                 }
-            }
-            else
-            {
-                if (iCurrentQuestion > tQuestionAnswer.Rows.Count)
-                {
-                    frmCESD frmNext = new frmCESD(tQuestionAnswer);
-                    frmNext.Show();
-                    
-                    this.Hide();
-                }
-
-                if (iCurrentQuestion < 1)
-                    iCurrentQuestion = 1;
-
-            }
+            }            
             
         }
 

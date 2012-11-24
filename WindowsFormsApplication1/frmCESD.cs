@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         private int iCurrentQuestion;
         //private DataTable tQuestionAnswer = new DataTable();
         private string sAnswer = "";
-        private int iQuestionStart = 19;
+        private int iQuestionStart = 20;
 
         public frmCESD(DataTable dt)
         {
@@ -25,7 +25,8 @@ namespace WindowsFormsApplication1
             tQuestionAnswer = dt;
 
             InitiateTable();
-            
+
+            btnBack.Visible = false;
             iCurrentQuestion = iQuestionStart;
             sAnswer = "";
             ShowQuestion();
@@ -40,6 +41,14 @@ namespace WindowsFormsApplication1
             sAnswer = "";
             //Prompt for Last Question
             iCurrentQuestion--;
+
+            if (iCurrentQuestion <= iQuestionStart)
+            {
+                iCurrentQuestion = iQuestionStart;
+                btnBack.Visible = false;
+            }
+
+            btnNext.Text = "Next";
             ShowQuestion();
         }
 
@@ -51,12 +60,23 @@ namespace WindowsFormsApplication1
             sAnswer = "";
             //Prompt for Next Question
             iCurrentQuestion++;
+            btnBack.Visible = true;
+
+            if (iCurrentQuestion == tQuestionAnswer.Rows.Count)
+            {
+                btnNext.Text = "Finish";
+
+            }
+            else if (iCurrentQuestion > tQuestionAnswer.Rows.Count)
+            {                
+                iCurrentQuestion = tQuestionAnswer.Rows.Count;
+            }
             ShowQuestion();
         }
 
 
         private void ShowQuestion()
-        {
+        {            
             DataRow[] result = tQuestionAnswer.Select("QuestionNumber = " + iCurrentQuestion.ToString());
 
             if (result.Length > 0)
@@ -85,17 +105,7 @@ namespace WindowsFormsApplication1
                         //unchecked the form
                         break;
                 }
-            }
-            else
-            {
-                if (iCurrentQuestion > tQuestionAnswer.Rows.Count)
-                    iCurrentQuestion = tQuestionAnswer.Rows.Count;
-
-                if (iCurrentQuestion < iQuestionStart)
-                    iCurrentQuestion = iQuestionStart;
-
-            }
-            
+            }            
         }
 
         private void SaveAnswer()

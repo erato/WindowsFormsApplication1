@@ -38,6 +38,7 @@
             this.lblQuestion = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.gbQuestionNumber.SuspendLayout();
             this.gbCESD.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,7 @@
             this.gbQuestionNumber.Controls.Add(this.lblQuestion);
             this.gbQuestionNumber.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbQuestionNumber.ForeColor = System.Drawing.Color.Black;
-            this.gbQuestionNumber.Location = new System.Drawing.Point(12, 14);
+            this.gbQuestionNumber.Location = new System.Drawing.Point(7, 46);
             this.gbQuestionNumber.Name = "gbQuestionNumber";
             this.gbQuestionNumber.Size = new System.Drawing.Size(906, 152);
             this.gbQuestionNumber.TabIndex = 5;
@@ -140,7 +141,7 @@
             // 
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBack.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(19, 185);
+            this.btnBack.Location = new System.Drawing.Point(19, 209);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(145, 42);
             this.btnBack.TabIndex = 7;
@@ -151,7 +152,7 @@
             // btnNext
             // 
             this.btnNext.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(763, 185);
+            this.btnNext.Location = new System.Drawing.Point(763, 209);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(145, 42);
             this.btnNext.TabIndex = 6;
@@ -159,12 +160,24 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label2.Location = new System.Drawing.Point(12, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(894, 27);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Please select the answer to the statement that best describes how often you felt " +
+    "or behaved this way DURING THE PAST WEEK.";
+            // 
             // frmCESD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(921, 240);
+            this.ClientSize = new System.Drawing.Size(921, 260);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.gbQuestionNumber);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
@@ -189,5 +202,6 @@
         private System.Windows.Forms.RadioButton rbMost;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Label label2;
     }
 }
