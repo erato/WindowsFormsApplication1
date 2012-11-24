@@ -181,6 +181,8 @@
             this.Controls.Add(this.gbQuestionNumber);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCESD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CES-D SCALE";

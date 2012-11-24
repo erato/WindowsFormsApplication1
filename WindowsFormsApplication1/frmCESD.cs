@@ -58,20 +58,29 @@ namespace WindowsFormsApplication1
             SaveAnswer();
 
             sAnswer = "";
-            //Prompt for Next Question
-            iCurrentQuestion++;
-            btnBack.Visible = true;
 
-            if (iCurrentQuestion == tQuestionAnswer.Rows.Count)
+            if (btnNext.Text == "Finish")
             {
-                btnNext.Text = "Finish";
+                //this is the end of the survey.
 
             }
-            else if (iCurrentQuestion > tQuestionAnswer.Rows.Count)
-            {                
-                iCurrentQuestion = tQuestionAnswer.Rows.Count;
+            else
+            {
+                //Prompt for Next Question
+                iCurrentQuestion++;
+                btnBack.Visible = true;
+
+                if (iCurrentQuestion == tQuestionAnswer.Rows.Count)
+                {
+                    btnNext.Text = "Finish";
+
+                }
+                else if (iCurrentQuestion > tQuestionAnswer.Rows.Count)
+                {
+                    iCurrentQuestion = tQuestionAnswer.Rows.Count;
+                }
+                ShowQuestion();
             }
-            ShowQuestion();
         }
 
 
