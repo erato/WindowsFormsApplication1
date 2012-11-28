@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace HCVQuestionnaire
 {
     public partial class frmCESD : Form
     {
@@ -62,7 +62,9 @@ namespace WindowsFormsApplication1
             if (btnNext.Text == "Finish")
             {
                 //this is the end of the survey.
-
+                frmThankYou frmFinish = new frmThankYou();
+                frmFinish.Show();
+                this.Close();
             }
             else
             {

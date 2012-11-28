@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace HCVQuestionnaire
 {
     partial class frmCESD
     {
@@ -52,7 +52,7 @@
             this.gbQuestionNumber.ForeColor = System.Drawing.Color.Black;
             this.gbQuestionNumber.Location = new System.Drawing.Point(7, 46);
             this.gbQuestionNumber.Name = "gbQuestionNumber";
-            this.gbQuestionNumber.Size = new System.Drawing.Size(906, 152);
+            this.gbQuestionNumber.Size = new System.Drawing.Size(906, 235);
             this.gbQuestionNumber.TabIndex = 5;
             this.gbQuestionNumber.TabStop = false;
             this.gbQuestionNumber.Text = "Question 1";
@@ -65,17 +65,17 @@
             this.gbCESD.Controls.Add(this.rbMost);
             this.gbCESD.Location = new System.Drawing.Point(410, 0);
             this.gbCESD.Name = "gbCESD";
-            this.gbCESD.Size = new System.Drawing.Size(389, 152);
+            this.gbCESD.Size = new System.Drawing.Size(389, 235);
             this.gbCESD.TabIndex = 7;
             this.gbCESD.TabStop = false;
             this.gbCESD.Text = "Answer";
             // 
             // rbOccasionally
             // 
-            this.rbOccasionally.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbOccasionally.Location = new System.Drawing.Point(18, 76);
+            this.rbOccasionally.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbOccasionally.Location = new System.Drawing.Point(6, 123);
             this.rbOccasionally.Name = "rbOccasionally";
-            this.rbOccasionally.Size = new System.Drawing.Size(365, 39);
+            this.rbOccasionally.Size = new System.Drawing.Size(377, 53);
             this.rbOccasionally.TabIndex = 3;
             this.rbOccasionally.TabStop = true;
             this.rbOccasionally.Text = "Occasionally or a Moderate Amount of Time (3-4 Days)";
@@ -83,10 +83,10 @@
             // 
             // rbSome
             // 
-            this.rbSome.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSome.Location = new System.Drawing.Point(18, 50);
+            this.rbSome.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSome.Location = new System.Drawing.Point(6, 70);
             this.rbSome.Name = "rbSome";
-            this.rbSome.Size = new System.Drawing.Size(365, 23);
+            this.rbSome.Size = new System.Drawing.Size(377, 53);
             this.rbSome.TabIndex = 2;
             this.rbSome.TabStop = true;
             this.rbSome.Text = "Some or a Little of the time (1-2 Days)";
@@ -94,10 +94,10 @@
             // 
             // rbRare
             // 
-            this.rbRare.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRare.Location = new System.Drawing.Point(18, 24);
+            this.rbRare.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbRare.Location = new System.Drawing.Point(6, 17);
             this.rbRare.Name = "rbRare";
-            this.rbRare.Size = new System.Drawing.Size(365, 23);
+            this.rbRare.Size = new System.Drawing.Size(377, 53);
             this.rbRare.TabIndex = 0;
             this.rbRare.TabStop = true;
             this.rbRare.Text = "Rarely or None of the Time (Less than 1 day)";
@@ -105,10 +105,10 @@
             // 
             // rbMost
             // 
-            this.rbMost.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMost.Location = new System.Drawing.Point(18, 118);
+            this.rbMost.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMost.Location = new System.Drawing.Point(6, 176);
             this.rbMost.Name = "rbMost";
-            this.rbMost.Size = new System.Drawing.Size(365, 23);
+            this.rbMost.Size = new System.Drawing.Size(377, 53);
             this.rbMost.TabIndex = 1;
             this.rbMost.TabStop = true;
             this.rbMost.Text = "Most or All of the time (5-7 days)";
@@ -118,7 +118,7 @@
             // 
             this.btnRead.AccessibleDescription = "Read this question";
             this.btnRead.AccessibleName = "Button";
-            this.btnRead.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.clipart_mb_speaker;
+            this.btnRead.BackgroundImage = global::HCVQuestionnaire.Properties.Resources.clipart_mb_speaker;
             this.btnRead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnRead.Location = new System.Drawing.Point(815, 17);
             this.btnRead.Name = "btnRead";
@@ -141,9 +141,9 @@
             // 
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBack.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(19, 209);
+            this.btnBack.Location = new System.Drawing.Point(9, 297);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(145, 42);
+            this.btnBack.Size = new System.Drawing.Size(222, 47);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -152,9 +152,9 @@
             // btnNext
             // 
             this.btnNext.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(763, 209);
+            this.btnNext.Location = new System.Drawing.Point(686, 297);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(145, 42);
+            this.btnNext.Size = new System.Drawing.Size(222, 47);
             this.btnNext.TabIndex = 6;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -173,10 +173,13 @@
             // 
             // frmCESD
             // 
+            this.AcceptButton = this.btnNext;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(921, 260);
+            this.CancelButton = this.btnBack;
+            this.ClientSize = new System.Drawing.Size(921, 360);
+            this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gbQuestionNumber);
             this.Controls.Add(this.btnBack);

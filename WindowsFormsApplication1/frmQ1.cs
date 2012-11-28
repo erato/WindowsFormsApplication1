@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
 
-namespace WindowsFormsApplication1
+namespace HCVQuestionnaire
 {
     public partial class frmQ1 : Form
     {        
@@ -91,8 +91,24 @@ namespace WindowsFormsApplication1
                     case "YesNo":
                         gbYesNo.Visible = true;
                         gbHighLow.Visible = false;
+                        gb654321.Visible = false;
+                        gbDays.Visible = false;
                         break;
                     case "HighLow":
+                        gbHighLow.Visible = true;
+                        gbYesNo.Visible = false;
+                        gb654321.Visible = false;
+                        gbDays.Visible = false;
+                        break;
+                    case "654321":
+                        gbHighLow.Visible = false;
+                        gbYesNo.Visible = false;
+                        gbDays.Visible = false;
+                        gb654321.Visible = true;
+                        break;
+                    case "Days":
+                        gb654321.Visible = false;
+                        gbDays.Visible = true;
                         gbHighLow.Visible = true;
                         gbYesNo.Visible = false;
                         break;
@@ -120,10 +136,50 @@ namespace WindowsFormsApplication1
                     case "Stable":
                         rbStable.Checked=true;
                         break;
+                    case "1":
+                        rb1.Checked = true;
+                        break;
+                    case "2":
+                        rb2.Checked = true;
+                        break;
+                    case "3":
+                        rb3.Checked=true;
+                        break;
+                    case "4":
+                        rb4.Checked=true;
+                        break;
+                    case "5":
+                        rb5.Checked=true;
+                        break;
+                    case "6":
+                       rb6.Checked = true;
+                        break;
+                    case "Monday":
+                        rbMonday.Checked = true;
+                        break;
+                    case "Tuesday":
+                        rbTuesday.Checked = true;
+                        break;
+                    case "Wednesday":
+                        rbWednesday.Checked = true;
+                        break;
+                    case "Thursday":
+                        rbThursday.Checked=true;
+                        break;
+                    case "Friday":
+                        rbFriday.Checked=true;
+                        break;
+                    case "Saturday":
+                        rbSaturday.Checked=true;
+                        break;
+                    case "Sunday":
+                        rbSunday.Checked=true;
+                        break;
                     default:
                         gbHighLow.Controls.OfType<RadioButton>().ToList().ForEach(p => p.Checked = false);
                         gbYesNo.Controls.OfType<RadioButton>().ToList().ForEach(p => p.Checked = false);
-
+                        gb654321.Controls.OfType<RadioButton>().ToList().ForEach(p => p.Checked = false);
+                        gbDays.Controls.OfType<RadioButton>().ToList().ForEach(p => p.Checked = false);
                         //unchecked the form
                         break;
                 }
@@ -146,6 +202,12 @@ namespace WindowsFormsApplication1
                 case "HighLow":
                     sAnswer = GetRadioSelection(gbHighLow);
                     break;
+                case "Days":
+                    sAnswer = GetRadioSelection(gbDays);
+                    break;
+                case "654321":
+                    sAnswer = GetRadioSelection(gb654321);
+                    break;
             }
            
             AnswerRow[0]["Answer"] = sAnswer;
@@ -166,7 +228,7 @@ namespace WindowsFormsApplication1
             tQuestionAnswer.Columns.Add("Answer", typeof(string));
 
             int i = 1;
-            tQuestionAnswer.Rows.Add(i++, "Have you missed any does of your medicine?", "YesNo");
+            tQuestionAnswer.Rows.Add(i++, "Have you missed any dose of your medicine?", "YesNo");
             tQuestionAnswer.Rows.Add(i++, "Have you missed more than 1 day of work since the last visit?", "YesNo");
             tQuestionAnswer.Rows.Add(i++, "Do you have any problems or signs of infection where you got the shot?", "YesNo");
             tQuestionAnswer.Rows.Add(i++, "Do you have pain in your bottom/rectum?", "YesNo");
