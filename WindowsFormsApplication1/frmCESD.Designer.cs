@@ -39,8 +39,11 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gbQuestionNumber.SuspendLayout();
             this.gbCESD.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbQuestionNumber
@@ -50,9 +53,9 @@
             this.gbQuestionNumber.Controls.Add(this.lblQuestion);
             this.gbQuestionNumber.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbQuestionNumber.ForeColor = System.Drawing.Color.Black;
-            this.gbQuestionNumber.Location = new System.Drawing.Point(7, 46);
+            this.gbQuestionNumber.Location = new System.Drawing.Point(7, 55);
             this.gbQuestionNumber.Name = "gbQuestionNumber";
-            this.gbQuestionNumber.Size = new System.Drawing.Size(906, 235);
+            this.gbQuestionNumber.Size = new System.Drawing.Size(906, 236);
             this.gbQuestionNumber.TabIndex = 5;
             this.gbQuestionNumber.TabStop = false;
             this.gbQuestionNumber.Text = "Question 1";
@@ -164,12 +167,29 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(12, 16);
+            this.label2.Location = new System.Drawing.Point(12, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(894, 27);
             this.label2.TabIndex = 8;
             this.label2.Text = "Please select the answer to the statement that best describes how often you felt " +
     "or behaved this way DURING THE PAST WEEK.";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(921, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(52, 20);
+            this.toolStripMenuItem1.Text = "About";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // frmCESD
             // 
@@ -184,6 +204,8 @@
             this.Controls.Add(this.gbQuestionNumber);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCESD";
@@ -191,7 +213,10 @@
             this.Text = "CES-D SCALE";
             this.gbQuestionNumber.ResumeLayout(false);
             this.gbCESD.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -208,5 +233,7 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

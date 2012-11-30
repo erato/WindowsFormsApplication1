@@ -274,5 +274,17 @@ namespace HCVQuestionnaire
 
         }
 
+        private void About_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+         
+            AboutBox1 frmAbout = new AboutBox1();
+            frmAbout.Show();
+        }
+
     }
 }
